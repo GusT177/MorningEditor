@@ -1,14 +1,33 @@
 <script>
+export default{
+    name: 'Language',
+    data(){
+        return{
+            languages: ["JS", "Python", "Java", "C++", "Ruby", "PHP"],
+        }
+    },
+    props: [],
+}
+
 </script>
 
 <template>
  <header class="menu">
       <nav class="options">
         <ul>
-          <li><button>File</button></li>
-          <li><button>Edit</button></li>
+          <li>
+            <select>
+                <option value="File">{{ FileOptions }}</option>
+            </select>
+          </li>
+          <li>
+            <select>
+            </select>
+          </li>
         </ul>
-        <select name="" id=""></select>
+        <select name="" id="">
+            <option value="Language" v-for="language in languages" :key="index">{{ language }}</option>
+        </select>
       </nav>
   </header>
 </template>
@@ -47,7 +66,10 @@ button{
 }
 
 select{
-    width: 3rem;
+    background-color: rgb(41, 40, 40);
+    width: 5rem;
+    padding: 0.5rem;
+    color: yellow;
 }
 
 </style>
