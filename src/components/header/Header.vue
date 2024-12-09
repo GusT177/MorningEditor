@@ -1,9 +1,14 @@
 <script>
+import DropDownBtn from '../dropdownbtn/DropDownBtn.vue';
+
 export default{
-    name: 'Language',
+    name: 'Header',
+    components: {
+        DropDownBtn
+    },
     data(){
         return{
-            languages: ["JS", "Python", "Java", "C++", "Ruby", "PHP"],
+            languages: ["JS", "Python", "PHP"],
         }
     },
     props: [],
@@ -16,13 +21,10 @@ export default{
       <nav class="options">
         <ul>
           <li>
-            <select>
-                <option value="File">{{ FileOptions }}</option>
-            </select>
+            <DropDownBtn></DropDownBtn>
           </li>
           <li>
-            <select>
-            </select>
+            <DropDownBtn></DropDownBtn>
           </li>
         </ul>
         <select name="" id="">
@@ -57,13 +59,6 @@ ul{
     color: white;
 }
 
-button{
-    background: none;
-    outline: none;
-    color: white;
-    padding: 0.5rem;
-    border-bottom: 1px solid yellow;
-}
 
 select{
     background-color: rgb(41, 40, 40);
